@@ -102,6 +102,7 @@ function App() {
     setReminders(items);
   };
 
+  console.log("Thank you all");
   const colors = ["#FF6B6B", "#4ECDC4", "#FFD166", "#6A4C93", "#118AB2"];
 
   return (
