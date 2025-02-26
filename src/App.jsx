@@ -67,12 +67,15 @@ function App() {
   const [scheduledTime, setScheduledTime] = useState("");
   const [darkMode, setDarkMode] = useState(false);
 
+  const local = "http://localhost:5000/reminders"
+  const server = "https://reminder-app-backend-7hx5.onrender.com/reminders"
+
   useEffect(() => {
     fetchReminders();
   }, []);
 
   const fetchReminders = async () => {
-    const response = await axios.get("http://localhost:5000/reminders");
+    const response = await axios.get(server);
     setReminders(response.data);
   };
 
@@ -82,7 +85,7 @@ function App() {
       formattedPhone = `+91${formattedPhone}`;
     }
 
-    await axios.post("http://localhost:5000/reminders", {
+    await axios.post(server, {
       message,
       phone: formattedPhone,
       scheduledTime,
