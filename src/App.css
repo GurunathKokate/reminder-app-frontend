@@ -1,2 +1,102 @@
 @import "tailwindcss";
 
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+  .bg-light {
+    background-color: #F4F3F2 !important;
+  }
+
+.custom-switch .form-check-input {
+    width: 50px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    background-color: rgb(216, 216, 216);
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+    background-image: none;
+
+  }
+  
+  .custom-switch .form-check-input:checked {
+    background-color: #222;
+  }
+  
+  .custom-switch .form-check-input::before {
+    content: "☀️";
+    position: absolute;
+    left: 3px;
+    top: 2px;
+    font-size: 14px;
+    transition: transform 0.3s linear;
+    /* border: 1px solid red; */
+    border-radius: 100%;
+    background-color: rgb(209 209 209);
+  }
+  
+  .custom-switch .form-check-input:checked::before {
+    content: "🌙";
+    transform: translateX(25px);
+    background-color: rgb(253, 253, 253);
+  }
+  
+
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  .title{
+    color: red;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+  }
+
+  .navbar-style {
+    background-color: #FFFFFF ;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.08);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .Navlogo{
+    font-family: auto;
+    color: rgb(255 118 118);
+    font-weight: 800;
+    font-size: 45px;
+  }
+  
+  .hidden {
+    transform: translateY(-100%);
+  }
+  
+  .visible {
+    transform: translateY(0);
+  }
+
+  .completed-btn{
+    background-color: #ffffffd1;
+    color:green;
+    border: none;
+    border-radius: 15px;
+  }
+
+  .delete-btn{
+    background-color: #ffffffd1;
+    border-radius: 15px;
+    border: none;
+  }
