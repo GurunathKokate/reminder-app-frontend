@@ -51,7 +51,7 @@ function App() {
 
 const deleteReminder = async (id) => {
   try {
-    await axios.delete(`${local}/${id}`); // Send DELETE request to backend
+    await axios.delete(`${server}/${id}`); // Send DELETE request to backend
     setReminders((prevReminders) => prevReminders.filter((reminder) => reminder[0] !== id)); // Update UI
   } catch (error) {
     console.error("Error deleting reminder:", error);
